@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Theme/app_button_style.dart';
 
-class AuthWidget extends StatefulWidget {
+class AuthWidget extends StatelessWidget {
   AuthWidget({Key? key}) : super(key: key);
 
-  @override
-  _AuthWidgetState createState() => _AuthWidgetState();
-}
-
-class _AuthWidgetState extends State<AuthWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,8 +76,8 @@ class __FormWidgetState extends State<_FormWidget> {
   String? errorText;
 
   void _auth() {
-    final login = _loginTextController.text;
-    final password = _passwordTextController.text;
+    String login = _loginTextController.text;
+    String password = _passwordTextController.text;
     if (login == 'admin' && password == 'admin') {
       errorText = null;
 
